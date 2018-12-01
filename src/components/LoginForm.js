@@ -15,7 +15,7 @@ class LoginForm extends Component {
 
   render() {
 
-    const { email } = this.props;
+    const { email, password } = this.props;
 
     return (
       <Card>
@@ -32,8 +32,8 @@ class LoginForm extends Component {
             secureTextEntry
             label="Password"
             placeholder="password"
-            // onChangeText={this.onPasswordChange.bind(this)}
-            // value={password}
+            onChangeText={this.onPasswordChange.bind(this)}
+            value={password}
           />
         </CardSection>
         <CardSection>
@@ -50,4 +50,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { emailChanged })(LoginForm);
+export default connect(mapStateToProps, { emailChanged, passwordChanged })(LoginForm);
