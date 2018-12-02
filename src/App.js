@@ -1,15 +1,14 @@
-import React, { Component } from 'React';
-import { View, Text } from 'react-native';
+import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import firebase from 'firebase';
-import LoginForm from './components/LoginForm';
+import Router from './Router';
 import configureStore from './configureStore';
 
 const store = configureStore();
 
 class App extends Component {
 
-  componentWillMount(){
+  componentWillMount() {
       const config = {
         apiKey: 'AIzaSyDGBmN8fRymZYA_dkAFSsR12W9lzjc40tg',
         authDomain: 'manager-98439.firebaseapp.com',
@@ -24,9 +23,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <View style={{paddingTop: 20}}>
-          <LoginForm />
-        </View>
+        <Router />
       </Provider>
     );
   }
