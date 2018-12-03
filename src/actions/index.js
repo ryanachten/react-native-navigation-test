@@ -49,7 +49,7 @@ const loginUserSuccess = (dispatch, user) => {
     payload: user
   });
 
-  Actions.employeeList(null);
+  Actions.main();
 }
 
 const loginUserFailure = (dispatch, error) => {
